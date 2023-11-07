@@ -13,8 +13,8 @@ public interface IShuffleList <T> extends List <T> {
             rand2 = rand.nextInt();
         }
         
-    }
-    default void swap(int i, int j){
-
+    }  
+    default void swap(int i, int j){  
+        
     }
 }
