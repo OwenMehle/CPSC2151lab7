@@ -5,18 +5,19 @@ import java.util.Random;
 public interface IShuffleList <T> extends List <T> {
     default void shuffle(int swaps) {
         Random rand = new Random();
-        int rand1 = rand.nextInt(T.size());
-        int rand2 = rand.nextInt(T.size());
+        int rand1 = rand.nextInt();
+        int rand2 = rand.nextInt();
         for (int i = 0; i < swaps; i++) {
             swap(rand1, rand2);
-            rand1 = rand.nextInt(T.size());
-            rand2 = rand.nextInt(T.size());
+            rand1 = rand.nextInt();
+            rand2 = rand.nextInt();
         }
     }
 
     default void swap(int i, int j){
-        T temp = T.get(i);
-        T.set(i, T.get(j));
-        T.set(j, temp);
+    //     T temp = T.get(i);
+    //     T.set(i, T.get(j));
+    //     T.set(j, temp);
+    // }
     }
 }
