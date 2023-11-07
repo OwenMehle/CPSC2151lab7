@@ -13,9 +13,10 @@ public interface IShuffleList <T> extends List <T> {
             rand2 = rand.nextInt(myList.sizeOf());
         }
     }
+
     default void swap(int i, int j){
         T temp = myList.get(i);
-        myList.set(i, j);
-        myList.set(temp, j);
+        myList.set(i, myList.get(j));
+        myList.set(j, temp);
     }
 }
